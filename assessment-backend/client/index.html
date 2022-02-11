@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+  </head>
+  <center>
+  <body class="container">
+    <button id="complimentButton">Get a compliment</button>
+
+    <body class="container">
+      <button id="fortuneButton">fortune</button>
+      <!-- I erased a line of code and now IDK why it stopped working -->
+
+    <!-- //instructions say I need to click the button to see what it does but it's not doing anything -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+              
+            });
+      };
+    </script>
+    <br>
+    <br>
+    <input type="text" placeholder="Enter a fortune here">
+    <select name="choose"><option value="first">Good fortune</option>
+      <option value="second" selected>Bad Fortune</option>
+      <option value="third">Nuetral fortune</option></select>
+      <br>
+      <br>
+      <input type="radio" id="html" name="fav_language" value="HTML">
+<label for="html">I like my fortune</label><br>
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for="css">I don't like my fortune</label><br>
+<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+<label for="javascript">I don't know how to feel</label>
+      <br>
+      <br>
+      <form>
+        <label for="birthday">Enter your birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+      </form>
+      <br>
+      <form>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <input type="hidden" id="custId" name="custId" value="3487">
+        <input type="submit" value="Submit">
+      </form>
+      
+  </body>
+</center>
+</html>
