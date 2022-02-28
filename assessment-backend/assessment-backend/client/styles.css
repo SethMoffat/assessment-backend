@@ -1,0 +1,19 @@
+.h1{
+    font-size: 30pt;
+    color: blue;
+}
+.background{
+    color: aquamarine;
+}
+
+.button {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: bold;
+    background: teal;
+    color: rgb(255, 230, 160);
+    margin-left: 20px;
+    vertical-align: middle;
+    cursor:pointer;
+}
